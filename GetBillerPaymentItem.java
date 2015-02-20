@@ -1,4 +1,4 @@
-package com.interswitchng.techquest.interswitch.api.sample.java.quickteller;
+package com.interswitchng.techquest.quickteller.sample.rest;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,10 +7,10 @@ import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
-import com.interswitchng.techquest.interswitch.api.sample.java.quickteller.util.InterswitchAuth;
+import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
-public class GetFeaturedBillers {
-
+public class GetBillerPaymentItem {
+	
 	public static final String QUICKTELLER_BASE_URL = "https://172.35.2.5:9080/api/v1/quickteller";
 	public static final String QUICKTELLER_BASE_URL2 = "http://172.35.2.5:9080/api/v1/quickteller";
 
@@ -22,21 +22,22 @@ public class GetFeaturedBillers {
 
 	private static final String CLIENT_ID = "IKIAD4A4E150C002732AF042E28BD28332DED7C87000"; 
 	private static final String CLIENT_SECRET = "ml0q1pCzo1ulgu7QyirH8RpH8K1WRjbl0hu3FBFNfkM=";
-
-	public static void main(String args[]) throws NoSuchAlgorithmException,
-			IOException {
-		getFeaturedBillers();
+	
+	public static void main (String args[]) throws NoSuchAlgorithmException, IOException {
+		getBillerPaymentItem();
 	}
 
-	public static void getFeaturedBillers() throws NoSuchAlgorithmException,
-			IOException {
-		String withService = "true";
+	public static void getBillerPaymentItem() throws NoSuchAlgorithmException, IOException  {
+		String quickTellerSiteUrlName = "intensitech";
+		String billerId = "8100";
 
 		String httpMethod = "GET";
-		String resourceUrl = QUICKTELLER_BASE_URL
-				+ "/billers/featureds?withServiceOptions=" + withService;
-		String resourceUrl2 = QUICKTELLER_BASE_URL2
-				+ "/billers/featureds?withServiceOptions=" + withService;
+		String resourceUrl = QUICKTELLER_BASE_URL + "/billers/" + billerId
+				+ "/paymentitems?quickTellerSiteUrlName="
+				+ quickTellerSiteUrlName;
+		String resourceUrl2 = QUICKTELLER_BASE_URL2 + "/billers/" + billerId
+				+ "/paymentitems?quickTellerSiteUrlName="
+				+ quickTellerSiteUrlName;
 		String clientId = CLIENT_ID;
 		String clientSecretKey = CLIENT_SECRET;
 		String signatureMethod = "SHA-256";

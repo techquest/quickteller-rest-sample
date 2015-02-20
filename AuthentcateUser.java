@@ -1,4 +1,4 @@
-package com.interswitchng.techquest.interswitch.api.sample.java.quickteller;
+package com.interswitchng.techquest.quickteller.sample.rest;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +16,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.interswitchng.techquest.interswitch.api.sample.java.quickteller.util.InterswitchAuth;
+import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
 public class AuthentcateUser {
 	public static final String QUICKTELLER_BASE_URL = "http://172.35.2.5:9080/api/v1/quickteller";

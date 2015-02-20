@@ -1,4 +1,4 @@
-package com.interswitchng.techquest.interswitch.api.sample.java.quickteller;
+package com.interswitchng.techquest.quickteller.sample.rest;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
-import com.interswitchng.techquest.interswitch.api.sample.java.quickteller.util.InterswitchAuth;
+import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
 
 

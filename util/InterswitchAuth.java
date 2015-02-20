@@ -1,4 +1,4 @@
-package com.interswitchng.techquest.interswitch.api.sample.java.quickteller.util;
+package com.interswitchng.techquest.quickteller.sample.rest.util;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
