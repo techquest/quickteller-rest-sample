@@ -19,8 +19,8 @@ import org.json.JSONObject;
 import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
 public class AuthentcateUser {
-	public static final String QUICKTELLER_BASE_URL = "http://172.35.2.5:9080/api/v1/quickteller";
-	public static final String QUICKTELLER_BASE_URL2 = "https://172.35.2.5:9080/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL = "http://sandbox.interswitchng.com/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL2 = "https://sandbox.interswitchng.com/api/v1/quickteller";
 
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";

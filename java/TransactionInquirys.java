@@ -20,8 +20,8 @@ import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
 public class TransactionInquirys {
 
-	public static final String QUICKTELLER_BASE_URL = "https://172.35.2.5:9080/api/v1/quickteller";
-	public static final String QUICKTELLER_BASE_URL2 = "http://172.35.2.5:9080/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL = "https://sandbox.interswitchng.com/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL2 = "http://sandbox.interswitchng.com/api/v1/quickteller";
 
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";

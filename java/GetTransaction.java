@@ -11,15 +11,15 @@ import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
 public class GetTransaction {
 	
-	public static final String QUICKTELLER_BASE_URL = "https://172.35.2.5:9080/api/v1/quickteller";
-	public static final String QUICKTELLER_BASE_URL2 = "http://172.35.2.5:9080/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL = "https://sandbox.interswitchng.com/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL2 = "http://sandbox.interswitchng.com/api/v1/quickteller";
 
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";
 	private static final String SIGNATURE_METHOD = "SIGNATURE_METHOD";
 	private static final String SIGNATURE = "SIGNATURE";
 	private static final String AUTHORIZATION = "AUTHORIZATION";
-
+	
 	private static final String CLIENT_ID = "IKIAD4A4E150C002732AF042E28BD28332DED7C87000"; 
 	private static final String CLIENT_SECRET = "ml0q1pCzo1ulgu7QyirH8RpH8K1WRjbl0hu3FBFNfkM=";
 	
