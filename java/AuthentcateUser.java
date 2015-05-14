@@ -28,8 +28,8 @@ public class AuthentcateUser {
 	private static final String SIGNATURE = "SIGNATURE";
 	private static final String AUTHORIZATION = "AUTHORIZATION";
 	
-	private static final String CLIENT_ID = "IKIAD4A4E150C002732AF042E28BD28332DED7C87000"; 
-	private static final String CLIENT_SECRET = "ml0q1pCzo1ulgu7QyirH8RpH8K1WRjbl0hu3FBFNfkM=";
+	private static final String CLIENT_ID = "your client ID"; 
+	private static final String CLIENT_SECRET = "your client secret";
 
 	public static void main(String args[]) throws NoSuchAlgorithmException,
 			ClientProtocolException, JSONException, IOException {

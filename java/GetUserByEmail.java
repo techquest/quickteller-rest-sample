@@ -14,7 +14,6 @@ import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 public class GetUserByEmail {
 	
 	public static final String QUICKTELLER_BASE_URL = "http://sandbox.interswitchng.com/api/v1/quickteller";
-	public static final String QUICKTELLER_BASE_URL2 = "https://sandbox.interswitchng.com/api/v1/quickteller";
 
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";
@@ -22,8 +21,8 @@ public class GetUserByEmail {
 	private static final String SIGNATURE = "SIGNATURE";
 	private static final String AUTHORIZATION = "AUTHORIZATION";
 	
-	private static final String CLIENT_ID = "IKIAD4A4E150C002732AF042E28BD28332DED7C87000"; 
-	private static final String CLIENT_SECRET = "ml0q1pCzo1ulgu7QyirH8RpH8K1WRjbl0hu3FBFNfkM=";
+	private static final String CLIENT_ID = "your client ID"; 
+	private static final String CLIENT_SECRET = "your client secret";
 
 	public static void main(String args[]) throws NoSuchAlgorithmException, IOException {
 		getuserbyEmail();
@@ -34,13 +33,12 @@ public class GetUserByEmail {
 
 		String httpMethod = "GET";
 		String resourceUrl = QUICKTELLER_BASE_URL + "/users/" + userEmail;
-		String resourceUrl2 = QUICKTELLER_BASE_URL2 + "/users/" + userEmail;
 		String clientId = CLIENT_ID;
 		String clientSecretKey = CLIENT_SECRET;
 		String signatureMethod = "SHA-256";
 
 		HashMap<String, String> interswitchAuth = InterswitchAuth
-				.generateInterswitchAuth(httpMethod, resourceUrl2, clientId,
+				.generateInterswitchAuth(httpMethod, resourceUrl, clientId,
 						clientSecretKey, "", signatureMethod);
 
 		URL obj = new URL(resourceUrl);

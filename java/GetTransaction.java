@@ -11,8 +11,7 @@ import com.interswitchng.techquest.quickteller.sample.rest.util.InterswitchAuth;
 
 public class GetTransaction {
 	
-	public static final String QUICKTELLER_BASE_URL = "https://sandbox.interswitchng.com/api/v1/quickteller";
-	public static final String QUICKTELLER_BASE_URL2 = "http://sandbox.interswitchng.com/api/v1/quickteller";
+	public static final String QUICKTELLER_BASE_URL = "http://sandbox.interswitchng.com/api/v1/quickteller";
 
 	private static final String TIMESTAMP = "TIMESTAMP";
 	private static final String NONCE = "NONCE";
@@ -20,8 +19,8 @@ public class GetTransaction {
 	private static final String SIGNATURE = "SIGNATURE";
 	private static final String AUTHORIZATION = "AUTHORIZATION";
 	
-	private static final String CLIENT_ID = "IKIAD4A4E150C002732AF042E28BD28332DED7C87000"; 
-	private static final String CLIENT_SECRET = "ml0q1pCzo1ulgu7QyirH8RpH8K1WRjbl0hu3FBFNfkM=";
+	private static final String CLIENT_ID = "your client ID"; 
+	private static final String CLIENT_SECRET = "your client secret";
 	
 	public static void main (String args[]) throws NoSuchAlgorithmException, IOException{
 			getTransaction();
@@ -33,7 +32,6 @@ public class GetTransaction {
 
 		String httpMethod = "GET";
 		String resourceUrl = QUICKTELLER_BASE_URL + "/transactions?requestReference=" + requestReference;
-		String resourceUrl2 = QUICKTELLER_BASE_URL2 + "/transactions?requestReference=" + requestReference;
 		String clientId = CLIENT_ID;
 		String clientSecretKey = CLIENT_SECRET;
 		String signatureMethod = "SHA-256";
@@ -41,7 +39,7 @@ public class GetTransaction {
 		HashMap<String, String> interswitchAuth = InterswitchAuth.generateInterswitchAuth(httpMethod, resourceUrl, clientId,
 						clientSecretKey, "", signatureMethod);
 
-		URL obj = new URL(resourceUrl2);
+		URL obj = new URL(resourceUrl);
 		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 		con.setRequestMethod("GET");
 		con.setRequestProperty("Authorization", interswitchAuth.get(AUTHORIZATION));
